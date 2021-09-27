@@ -1,0 +1,38 @@
+.post {
+  width: 400px;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #333;
+
+  &__body {
+    margin: 1rem 0 1rem 0;
+  }
+
+  &__image {
+    height: 250px;
+  }
+
+  &__content {
+    text-align: left;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  &__date {
+    font-style: italic;
+    font-weight: 200;
+  }
+
+  &__category {
+    font-weight: 600;
+    a {
+      text-decoration: none;
+      margin-right: 0.5rem;
+    }
+  }
+}

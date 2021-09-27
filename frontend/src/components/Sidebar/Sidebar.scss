@@ -1,0 +1,50 @@
+.sidebar {
+  margin-top: 2rem;
+  color: #333;
+  text-align: center;
+
+  &__item {
+    border: 1px solid #aaa;
+    border-width: 1px 0 1px 0;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 400;
+    font-family: "Varela Round", sans-serif;
+    font-size: 1.25rem;
+    margin: 0.5rem 0 0.5rem 0;
+  }
+
+  &__image {
+    max-width: 80%;
+  }
+
+  &__list {
+    list-style: none;
+    li {
+      a {
+        font-size: 1.1rem;
+        color: #333 !important;
+        transition: all 0.25s ease-in-out 0s;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__text {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+    color: #333;
+    i {
+      width: 30px;
+    }
+  }
+
+  &__icon:last-child {
+    margin-right: 0;
+  }
+}

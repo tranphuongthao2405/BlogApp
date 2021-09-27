@@ -1,0 +1,22 @@
+.header {
+  padding: 1rem;
+  font-size: 1.25rem;
+
+  &__link {
+    color: #333;
+    transition: all 0.25s ease-in-out 0s;
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+  }
+
+  &__title {
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+
+  &__title:last-child {
+    margin-right: 0;
+  }
+}
