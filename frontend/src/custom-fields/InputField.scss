@@ -1,0 +1,31 @@
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
+.formgroup {
+  &__label {
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  &__input {
+    margin: 0 0 0.5rem 0;
+    @media screen and (max-width: $small) {
+      width: 250px;
+    }
+    @media screen and (max-width: $medium) and (min-width: $small) {
+      width: 300px;
+    }
+    @media screen and (min-width: $medium) {
+      width: 450px;
+    }
+    @media screen and (min-width: $large) {
+      width: 500px;
+    }
+    @media screen and (min-width: $extra-large) {
+      width: 500px;
+    }
+  }
+}

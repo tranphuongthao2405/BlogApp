@@ -1,5 +1,24 @@
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
 .post {
-  width: 400px;
+  @media screen and (max-width: $small) {
+    width: 300px;
+  }
+  @media screen and (max-width: $medium) and (min-width: $small) {
+    width: 350px;
+  }
+  @media screen and (min-width: $medium) {
+    width: 400px;
+  }
+  @media screen and (min-width: $large) {
+    width: 400px;
+  }
+  @media screen and (min-width: $extra-large) {
+    width: 450px;
+  }
   margin: 1.5rem;
   display: flex;
   flex-direction: column;

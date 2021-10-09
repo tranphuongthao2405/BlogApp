@@ -19,7 +19,7 @@ function index(props) {
               alt="Sidebar image"
               className="sidebar__image"
             />
-            <p className="sidebar__text">
+            <p className="sidebar__text text-truncate">
               Laboris sunt aute cupidatat velit magna velit ullamco dolore
               mollit amet ex esse.Sunt eu ut nostrud id quis proident.
             </p>

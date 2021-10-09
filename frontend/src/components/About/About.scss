@@ -1,20 +1,28 @@
-$small: 480px;
-$medium: 960px;
-$large: 1170px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
 
 .about {
   margin-top: 2rem;
   background-image: url("https://images.pexels.com/photos/1167355/pexels-photo-1167355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   width: 100%;
+  @media screen and (max-width: $small) {
+    height: 250px;
+  }
   @media screen and (max-width: $medium) and (min-width: $small) {
-    height: 450px;
+    height: 400px;
   }
   @media screen and (min-width: $medium) {
     height: 500px;
   }
   @media screen and (min-width: $large) {
-    height: 700px;
+    height: 600px;
   }
+  @media screen and (min-width: $extra-large) {
+    height: 650px;
+  }
+
   background-repeat: no-repeat;
   background-size: cover;
 

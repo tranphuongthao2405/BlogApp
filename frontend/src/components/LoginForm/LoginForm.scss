@@ -1,0 +1,11 @@
+.loginform {
+  &__button-control,
+  &__input-control {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    margin-top: 0.5rem;
+  }
+}
