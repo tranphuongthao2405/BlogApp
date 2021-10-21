@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import LoginForm from "components/LoginForm";
-import { Container, Row } from "reactstrap";
 import "./Login.scss";
 
 Login.propTypes = {};
