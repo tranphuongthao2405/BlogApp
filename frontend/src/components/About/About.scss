@@ -1,34 +1,40 @@
-$small: 576px;
-$medium: 768px;
-$large: 992px;
-$extra-large: 1200px;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
 
 .about {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   background-image: url("https://images.pexels.com/photos/1167355/pexels-photo-1167355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   width: 100%;
-  @media screen and (max-width: $small) {
-    height: 250px;
-  }
-  @media screen and (max-width: $medium) and (min-width: $small) {
-    height: 400px;
-  }
-  @media screen and (min-width: $medium) {
-    height: 500px;
-  }
-  @media screen and (min-width: $large) {
-    height: 600px;
-  }
-  @media screen and (min-width: $extra-large) {
-    height: 650px;
-  }
+  height: 700px;
 
   background-repeat: no-repeat;
   background-size: cover;
 
   &__title {
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 4rem;
     color: #333;
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .about {
+    height: 250px;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) and (min-width: $mobile) {
+  .about {
+    height: 400px;
+
+    &__title {
+      font-size: 3rem;
+    }
   }
 }

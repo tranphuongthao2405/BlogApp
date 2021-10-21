@@ -44,7 +44,7 @@ function InputField(props) {
         disabled={disabled}
         invalid={showError}
       />
-      <ErrorMessage name={name} component={FormFeedback} />
+      <ErrorMessage name={name} component={FormFeedback} className="formgroup__message"/>
     </FormGroup>
   );
 }

@@ -13,9 +13,9 @@ function Login(props) {
   };
 
   return (
-    <div className="form">
-      <h1 className="form__title">Sign in</h1>
-      <LoginForm className="form__content" onSubmit={handleSubmit} />
+    <div className="loginform">
+      <h1 className="loginform__title">Sign in</h1>
+      <LoginForm className="loginform__content" onSubmit={handleSubmit} />
     </div>
   );
 }

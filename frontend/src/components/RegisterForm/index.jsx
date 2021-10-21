@@ -4,27 +4,31 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Button, FormGroup } from "reactstrap";
 import * as Yup from "yup";
-import "./LoginForm.scss";
+import "./RegisterForm.scss";
 
-LoginForm.propTypes = {
+RegisterForm.propTypes = {
   onSubmit: PropTypes.func,
 };
 
-LoginForm.defaultProps = {
+RegisterForm.defaultProps = {
   onSubmit: null,
 };
 
-function LoginForm(props) {
+function RegisterForm(props) {
+  // TODO: add some more info such as gender, birthdate,...
   const initialValues = {
+    firstname: "",
+    lastname: "",
     email: "",
     password: "",
   };
 
   const validationSchema = Yup.object().shape({
+    firstname: Yup.string().required("This field is required"),
+    lastname: Yup.string().required("This field is required"),
     email: Yup.string().email().required("This field is required"),
     password: Yup.string().required("This field is required"),
   });
-
   return (
     <Formik
       initialValues={initialValues}
@@ -32,10 +36,25 @@ function LoginForm(props) {
       onSubmit={props.onSubmit}
     >
       {(formikProps) => {
-        const { values, errors, touched } = formikProps;
-
+        const { value, errors, touched } = formikProps;
         return (
-          <Form className="login-form">
+          <Form className="register-form">
+            <FastField
+              name="firstname"
+              type="text"
+              component={InputField}
+              label="First name"
+              placeholder="Please enter your first name"
+            />
+
+            <FastField
+              name="lastname"
+              type="text"
+              component={InputField}
+              label="Last name"
+              placeholder="Please enter your last name"
+            />
+
             <FastField
               name="email"
               type="text"
@@ -52,8 +71,8 @@ function LoginForm(props) {
               placeholder="Please enter your password"
             />
 
-            <FormGroup className="login-form__button-control">
-              <Button type="submit" className="login-form__button">
+            <FormGroup className="register-form__button-control">
+              <Button type="submit" className="register-form__button">
                 Submit
               </Button>
             </FormGroup>
@@ -64,4 +83,4 @@ function LoginForm(props) {
   );
 }
 
-export default LoginForm;
+export default RegisterForm;

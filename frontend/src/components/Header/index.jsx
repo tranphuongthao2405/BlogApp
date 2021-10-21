@@ -13,7 +13,7 @@ function Header(props) {
     <div className="header">
       <Container>
         <Row className="justify-content-between">
-          <Col xs="auto">
+          <Col xs="auto" className="header__icon-list">
             <a className="header__link header__icon" href="/">
               <i className="topIcon fab fa-facebook-square"></i>
             </a>

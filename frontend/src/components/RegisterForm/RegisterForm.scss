@@ -2,7 +2,7 @@ $mobile: 480px;
 $tablet: 768px;
 $desktop: 1024px;
 
-.login-form {
+.register-form {
   &__button-control,
   &__input-control {
     display: flex;
@@ -18,7 +18,7 @@ $desktop: 1024px;
 }
 
 @media screen and (max-width: $mobile) {
-  .login-form {
+  .register-form {
     &__button {
       font-size: 1.4rem;
       min-width: 100px;
@@ -28,7 +28,7 @@ $desktop: 1024px;
 }
 
 @media screen and (max-width: $tablet) and (min-width: $mobile) {
-  .login-form {
+  .register-form {
     &__button {
       font-size: 1.8rem;
       min-width: 160px;

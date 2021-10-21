@@ -1,7 +1,6 @@
-$small: 576px;
-$medium: 768px;
-$large: 992px;
-$extra-large: 1200px;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
 
 .sidebar {
   margin-top: 2rem;
@@ -17,8 +16,8 @@ $extra-large: 1200px;
     display: block;
     font-weight: 400;
     font-family: "Varela Round", sans-serif;
-    font-size: 1.25rem;
     margin: 0.5rem 0 0.5rem 0;
+    font-size: 3rem;
   }
 
   &__image {
@@ -27,9 +26,10 @@ $extra-large: 1200px;
 
   &__list {
     list-style: none;
+    padding: 0;
     li {
       a {
-        font-size: 1.1rem;
+        font-size: 2.2rem;
         color: #333 !important;
         transition: all 0.25s ease-in-out 0s;
         text-decoration: none;
@@ -38,32 +38,75 @@ $extra-large: 1200px;
   }
 
   &__text {
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    @media screen and (max-width: $small) {
-      max-width: 80px;
-    }
-    @media screen and (max-width: $medium) and (min-width: $small) {
-      max-width: 170px;
-    }
-    @media screen and (min-width: $medium) {
-      max-width: 280px;
-    }
-    @media screen and (min-width: $large) {
-      max-width: 350px;
-    }
-    @media screen and (min-width: $extra-large) {
-      max-width: 400px;
-    }
+    font-size: 2.2rem;
+    width: 430px;
   }
 
   &__icon {
     color: #333;
     i {
-      width: 30px;
+      width: 50px;
+      font-size: 3rem;
     }
   }
 
   &__icon:last-child {
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .sidebar {
+    &__title {
+      font-size: 1.6rem;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      width: 120px;
+    }
+
+    &__list {
+      li {
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &__icon {
+      i {
+        font-size: 1.6rem;
+        width: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) and (min-width: $mobile) {
+  .sidebar {
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      width: 270px;
+    }
+
+    &__list {
+      li {
+        a {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    &__icon {
+      i {
+        width: 30px;
+        font-size: 2.4rem;
+      }
+    }
   }
 }
